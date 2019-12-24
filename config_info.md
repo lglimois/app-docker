@@ -19,3 +19,7 @@ Liste l'ordre de chargement des variables de spring boot:<br>
 If you use environment variables rather than system properties, most operating systems disallow period-separated key names,<br>
 but you can use underscores instead (for example, SPRING_CONFIG_NAME instead of spring.config.name).
 
+# Spring boot reference Guide
+cf. https://docs.spring.io/spring-boot/docs/current/reference/html/index.html
+
+How-to
