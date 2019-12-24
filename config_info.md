@@ -65,3 +65,19 @@ cf. https://docs.spring.io/spring-boot/docs/current/reference/html/index.html
 
 How-to: contient divers elements sur Spring boot: <br>
 logging, conf, init datasource
+
+# Angular
+cf. https://codinglatte.com/posts/angular/using-os-environment-variables-in-angular-with-docker/
+
+environment.prod.ts
+<pre><code>
+export const environment = {
+  production: true,
+  environment: $ENV.ENVIRONMENT,
+  APIKeys: {
+    SomeAPIKey: $ENV.SomeAPIKey,
+    SomeOtherAPIKey: $ENV.SomeOtherAPIKey
+  }
+};
+</code></pre>
+
