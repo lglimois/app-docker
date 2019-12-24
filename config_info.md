@@ -8,6 +8,43 @@ cf. https://spring.io/guides/gs/spring-boot-docker/
 Advanced Spring Boot Docker<br>
 cf. https://spring.io/guides/topicals/spring-boot-docker
 
+## Docker vs Docker-compose
+Dockerfile
+
+<pre><code>
+FROM openjdk:8-jdk-alpine
+VOLUME /tmp
+ARG JAR_FILE
+COPY ${JAR_FILE} app.jar
+ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]
+</code></pre>
+
+Docker-compose
+<pre><code>
+version: '2'
+services:
+    myapp:
+        image: mycompany/myapp:1.0.0
+        container_name: myapp
+        depends_on:
+        - mysql
+        environment:
+            - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/myapp?useUnicode=true&characterEncoding=utf8&useSSL=false
+        ports:
+            - 8080:8080
+
+    mysql:
+        image: mysql:5.7.19
+        container_name: mysql
+        volumes:
+            - /home/docker/volumes/myapp/mysql/:/var/lib/mysql/
+        environment:
+            - MYSQL_USER=root
+            - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+            - MYSQL_DATABASE=myapp
+        command: mysqld --lower_case_table_names=1 --skip-ssl --character_set_server=utf8
+</code></pre>
+
 
 ### Tweaks  
 //parametrage avançé pour optimisation
