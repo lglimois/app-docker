@@ -77,7 +77,7 @@ logging, conf, init datasource
 
 <a name="angular"></a>
 # Angular
-Ce tuto permet de charger des variables d'environnement sans variable de probleme d'appel au runtime (à cause des process.env.).<br>
+Ce tuto permet de charger des variables d'environnement sans variable de probleme d'appel au runtime (à cause des process.env.). <br>
 cf. https://codinglatte.com/posts/angular/using-os-environment-variables-in-angular-with-docker/
 
 environment.prod.ts
