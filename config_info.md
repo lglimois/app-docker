@@ -1,4 +1,4 @@
-Table of content
+<h1>Table of content</h1>
 1. [ Spring-Boot. ](#springboot)
 2. [ Docker. ](#docker)
 3. [ Spring boot reference Guide. ](#sb_reference)
@@ -77,6 +77,7 @@ logging, conf, init datasource
 
 <a name="angular"></a>
 # Angular
+Ce tuto permet de charger des variables d'environnement sans variable de probleme d'appel au runtime (à cause des process.env.).<br>
 cf. https://codinglatte.com/posts/angular/using-os-environment-variables-in-angular-with-docker/
 
 environment.prod.ts
@@ -91,3 +92,5 @@ export const environment = {
 };
 </code></pre>
 
+## tuto pour construire des images Angular Docker
+cf. https://codinglatte.com/posts/angular/building-docker-images-angular/
