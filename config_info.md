@@ -1,12 +1,27 @@
-# Configuration
+# Spring-Boot
+## Configuration
+Les variables sont chargées dans le fichier application.propeties ou .yaml. <br>
+Liste l'ordre de chargement des variables de spring boot:<br>
 
-## Docker
-Passing argument:<br>
+cf. https://docs.spring.io/spring-boot/docs/current/reference/html/spring-boot-features.html#boot-features-external-config
+
+## Variables d'environnements
+Utilisation de variables d'environnement possible: SPRING_CONFIG_NAME instead of spring.config.name
+
+If you use environment variables rather than system properties, most operating systems disallow period-separated key names,<br>
+but you can use underscores instead (for example, SPRING_CONFIG_NAME instead of spring.config.name).
+
+# Docker
+## Passing argument
+via var env
 $ docker run -e "SPRING_PROFILES_ACTIVE=prod" -p 8080:8080 -t springio/gs-spring-boot-docker
 cf. https://spring.io/guides/gs/spring-boot-docker/
 
-Advanced Spring Boot Docker<br>
+### Advanced Spring Boot Docker
 cf. https://spring.io/guides/topicals/spring-boot-docker
+
+#### Tweaks  
+//parametrage avançé pour optimisation demarrage Spring 
 
 ## Docker vs Docker-compose
 Dockerfile
@@ -45,18 +60,8 @@ services:
         command: mysqld --lower_case_table_names=1 --skip-ssl --character_set_server=utf8
 </code></pre>
 
-
-### Tweaks  
-//parametrage avançé pour optimisation
-
-## Spring-Boot
-cf. https://docs.spring.io/spring-boot/docs/current/reference/html/spring-boot-features.html#boot-features-external-config
-
-Liste l'ordre de chargement des variables de spring boot:<br>
-If you use environment variables rather than system properties, most operating systems disallow period-separated key names,<br>
-but you can use underscores instead (for example, SPRING_CONFIG_NAME instead of spring.config.name).
-
 # Spring boot reference Guide
 cf. https://docs.spring.io/spring-boot/docs/current/reference/html/index.html
 
-How-to
+How-to: contient divers elements sur Spring boot: <br>
+logging, conf, init datasource
