@@ -1,3 +1,10 @@
+Table of content
+1. [ Spring-Boot. ](#springboot)
+2. [ Docker. ](#docker)
+3. [ Spring boot reference Guide. ](#sb_reference)
+4. [ Angular. ](#angular)
+
+<a name="springboot"></a>
 # Spring-Boot
 ## Configuration
 Les variables sont chargées dans le fichier application.propeties ou .yaml. <br>
@@ -11,6 +18,7 @@ Utilisation de variables d'environnement possible: SPRING_CONFIG_NAME instead of
 If you use environment variables rather than system properties, most operating systems disallow period-separated key names,<br>
 but you can use underscores instead (for example, SPRING_CONFIG_NAME instead of spring.config.name).
 
+<a name="docker"></a>
 # Docker
 ## Passing argument
 via var env
@@ -60,12 +68,14 @@ services:
         command: mysqld --lower_case_table_names=1 --skip-ssl --character_set_server=utf8
 </code></pre>
 
+<a name="sb_reference"></a>
 # Spring boot reference Guide
 cf. https://docs.spring.io/spring-boot/docs/current/reference/html/index.html
 
 How-to: contient divers elements sur Spring boot: <br>
 logging, conf, init datasource
 
+<a name="angular"></a>
 # Angular
 cf. https://codinglatte.com/posts/angular/using-os-environment-variables-in-angular-with-docker/
 
