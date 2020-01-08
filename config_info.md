@@ -95,3 +95,13 @@ export const environment = {
 
 ## tuto pour construire des images Angular Docker
 cf. https://codinglatte.com/posts/angular/building-docker-images-angular/
+
+# Modelisation
+@startuml component
+actor client
+node app
+database db
+
+db -> app
+app -> client
+@enduml
