@@ -1,0 +1,14 @@
+@startuml
+
+[First component]
+[Another component] as Comp2  
+component Comp3
+component [Last\ncomponent1] as Comp4
+component [Last\ncomponent2] as Comp42
+component [Last\ncomponent3] as Comp43
+component [Last\ncomponent4] as Comp44
+component [Last\ncomponent5] as Comp45
+component [Last\ncomponent6] as Comp46
+component [Last\ncomponent7] as Comp47
+
+@enduml

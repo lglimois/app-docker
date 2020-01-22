@@ -1,4 +1,4 @@
-package model;
+package fr.sh.msail.model;
 
 public class Regate {
 	protected String ville;
